@@ -1,4 +1,4 @@
-*, *::after, *::before {
+* {
   box-sizing: border-box;
 }
 
@@ -7,15 +7,48 @@ body {
   margin: 0;
   font-family: Helvetica;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows:  10vh 10vh 40vh 40vh;
+  grid-template-columns: 1fr;
+  grid-template-rows:  65px;
   grid-template-areas: 
-    ".bar"
-    "h3"
-    "art" 
+    "nav"
+    "b1"
+    "b2"
+    "b3"
+    "b4" 
 }
 
-nav, .bar {
+p {
+  display: inline;
+  color: white;
+  padding: 0 0 0 20px;
+  font-size: 15px;
+  font-family: 'Philosopher', sans-serif;
+}
+
+h2 {
+  color: white;
+  size:20px;
+  padding: 25px 35px 0 35px;
+  text-align: left;
+  font-family: 'Philosopher', sans-serif;
+}
+
+.comments {
+font-family: 'Philosopher', sans-serif;
+font-size: 11px;
+padding: 0 0 0 10px;
+}
+
+h6 {
+  color: white;
+  text-align: left;
+  display: inline;
+  font-size: 10px;
+  font-family: 'Philosopher', sans-serif;
+  padding: 0 0 0 13px;
+}
+
+nav {
   display: flex;
   color: white;
   background-color: #D33A2C;
@@ -28,63 +61,70 @@ nav, .bar {
 }
 
 .bar {
-  grid-area: .bar;
-}
-
-h3 {
-  grid-area: h3;
-  width: 25%;
-  display: flex;
+  grid-area: nav;
+  background-color: #D33A2C;
   justify-content: center;
-  align-items: center;
-  background:  white;
-  background-size: auto; 
-
 }
-section {
-  grid-area: art;
-  color: white;
-  font-family: GIll Sans, sans-serif;
-  font-size: 30px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 25vh 25vh 25vh 25vh;
-  height: 100vh;
+.tag {
+  color: black;
+  font-size: 11px;
+}
+.article1 img {
+  border: 3px solid white;
+  border-radius: 20%;
+  margin: 0 auto;
+  width: 75px;  
 }
 
-.one {
+.article2 img {
+  border: 3px solid white;
+  border-radius: 20%;
+  margin: 0 auto;
+  width: 75px; 
+  height: 75px; 
+}
+
+.article3 img {
+  border: 3px solid white;
+  border-radius: 20%;
+  margin: 0 auto;
+  width: 75px; 
+}
+.article4 img {
+  border: 3px solid white;
+  border-radius: 20%;
+  margin: 0 auto;
+  width: 75px;
+}
+
+#art1 {
+  grid-area: b1;
   background-color: #BC3428;
 }
-.two {
-  background-color: #C7372A:
+#art2 {
+  grid-area: b2;
+  background-color: #C7372A;
 }
-.three {
+#art3 {
+  grid-area: b3;
   background-color: #B13125;
 }
-.four {
+#art4 {
+  grid-area: b4;
   background-color: #BC3428;
 }
- @media only screen and (min-width: 768px){
+
+nav, #art1, #art2, #art3, #art4 {
+  display: flex;
+}
+
+@media only screen and (min-width: 768px){
   body {
-    display: grid;
-    margin: 10px;
-    grid-template-columns: 1fr;
-    grid-template-rows:  10vh 10vh 20vh 20vh 20vh 20vh;
-    grid-template-areas: 
-      ".bar"
-      "h3"
-      "art" 
-  }
- 
-/* @media only screen and (min-width: 1024px){
-  body {
-    display: grid;
-    margin: 10px;
-    height: 100vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10vh 10vh 40vh 40vh;
+    grid-template-rows:  75px 375px 375px;
     grid-template-areas: 
-    ".bar"
-    "h3"
-    "art"
-  }  */
+      "nav nav"
+      "b1 b2"
+      "b3 b4";
+  }
+}
